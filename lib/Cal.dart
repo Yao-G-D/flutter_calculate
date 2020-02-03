@@ -1,15 +1,18 @@
 
-import 'package:flutter/cupertino.dart';
 
+// fixme 类名大驼峰, 但是在flutter中, dart文件名应该是小写加下划线的形式,例如 hello_world
 class Cal {
 
   String _output = "";
+  // fixme 变量名要小驼峰 _curNum
   String _curnum = "";
+  // fixme get 也是方法, 方法名要小驼峰 outPut
   String get OutPut => this._output;
   List<String> _s1=[],_s2=[];
   List<double>_s3=[];
   double result = 0;
 
+  // fixme 可以重命名为Number
   static const Key = [
     "9", "8", "7", //
     "6", "5", "4", //
@@ -25,7 +28,7 @@ class Cal {
   ];
 
   static const RKeysMap={
-    "/":2,"*":2,"+":1,"-":1
+    "=":3,"/":2,"*":2,"+":1,"-":1
   };//运算级的优先顺序
 
   //右侧按钮
@@ -49,6 +52,7 @@ class Cal {
       if(_s2.length == 0){
         _s2.add(key);
       }else{
+        // fixme 小驼峰
         String lastkey = _s2[_s2.length-1];
         if(RKeysMap[key]<=RKeysMap[lastkey]){
           while(_s2.length>0){

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_calculate/index.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:IndexPage(),
+      home: IndexPage(),
     );
   }
 }

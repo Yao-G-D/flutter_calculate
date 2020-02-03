@@ -33,10 +33,11 @@ class IndexPage extends StatefulWidget {
   }
 }
 
+Cal _cal = new Cal();
 class IndexPageState extends State<IndexPage> {
   String _num = "";
 
-  Cal _cal = new Cal();
+
 
   void clickKey(String key) {
 //    if ("C".compareTo(key) == 0) {
@@ -46,10 +47,10 @@ class IndexPageState extends State<IndexPage> {
 //    setState(() {
 //      _num += key;
 //    });
-  _cal.addKey(key);
-  setState(() {
-    _num = _cal.OutPut;//输出到显示区域上
-  });
+    _cal.addKey(key);
+    setState(() {
+      _num = _cal.OutPut; //输出到显示区域上
+    });
   }
 
   Widget build(BuildContext context) {
